@@ -1,0 +1,9 @@
+function brew-deps {
+	echo -n $fg[green] $1: $fg[white]; brew deps $1 | awk '{ printf(" %s ", $0) }' ; echo ""
+}
+
+function brew-all-deps {
+	brew list | while read formula; do brew-deps $formula; done
+}
+
+# vi: ft=zsh
