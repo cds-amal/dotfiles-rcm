@@ -85,3 +85,6 @@ nvm use default
 # Add cargo-installed binaries to the path
 export CARGO_HOME="$HOME/.cargo"
 export PATH="$PATH:$CARGO_HOME/bin"
+
+# use bat for man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
