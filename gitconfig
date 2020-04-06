@@ -8,10 +8,12 @@
   local = yellow
   remote = green
 [color "diff"]
-  meta = yellow bold
+  meta = 11
   frag = magenta bold
-  old = red
-  new = green
+  old = red bold
+  new = green bold
+  commit = yellow bold
+  whitespace = red reverse
 
 [commit]
   template = ~/.gitmessage
@@ -20,6 +22,7 @@
 [rebase]
   autosquash = true
 [alias]
+  patch = !git --no-pager diff --no-color
   # add
   a = add                           # add
   chunkyadd = add --patch           # stage commits chunk by chunk
@@ -120,6 +123,7 @@
   autocrlf = false
   editor = nvim
   excludesfile = ~/.gitignore
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [advice]
   statusHints = false
 [diff]
@@ -135,6 +139,11 @@
 [include]
   path = ~/.gitconfig.local
 [pager]
-	log = false
+  log = false
 [hub]
-	protocol = ssh
+  protocol = ssh
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
