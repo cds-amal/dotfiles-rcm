@@ -65,4 +65,6 @@ Plug 'godlygeek/tabular'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
 
+Plug 'tpope/vim-scriptease'              " vim script helpers
+
 call plug#end()
