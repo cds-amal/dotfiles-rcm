@@ -52,6 +52,7 @@ _load_settings "$HOME/.zsh/configs"
 # zplugs
 source ~/.zplug/init.zsh
 zplug "zsh-users/zsh-history-substring-search"
+zplug "mnowotnik/extra-fzf-completions"
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 # zplug "plugins/themes",   from:oh-my-zsh
@@ -64,7 +65,8 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+# zplug load --verbose
+zplug load
 
 
 # trigger a ch dir so it can read environment files
@@ -88,3 +90,8 @@ export PATH="$PATH:$CARGO_HOME/bin"
 
 # use bat for man pages
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# fzf completion
+# https://github.com/mnowotnik/extra-fzf-completions
+export EXTRA_FZF_COMPLETIONS=(docker)
+
