@@ -29,6 +29,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-fugitive'               " Git wrapper
 Plug 'tpope/vim-rhubarb'                "     needed for fugitive
 Plug 'airblade/vim-gitgutter'           " Git gutter indicators
+Plug 'rbong/vim-flog'                   " Git navigation
+Plug 'jreybert/vimagit'
 
 " status line --------------- {{{1
 " ================================
