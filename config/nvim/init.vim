@@ -48,6 +48,8 @@ source $HOME/.config/nvim/functions/whitespace.vim
 " General settings ---------- {{{1
 " ================================
 
+set grepprg=ag         " use silver searcher for grepping
+
 " relativenumber ------------ {{{2
 
 set number             " Show line numbers
