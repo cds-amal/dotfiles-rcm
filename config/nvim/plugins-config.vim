@@ -55,8 +55,22 @@ let g:ale_fixers = {
 let g:ale_set_quickfix=1
 let g:ale_set_highlights=1
 
+" colorscheme    ------------ {{{1
+" ================================
+
 " colorscheme solarized8_dark_high
-colorscheme gruvbox
+" colorscheme gruvbox
+
+" true colors are required for vim in terminal
+set termguicolors
+
+" if you prefer the default one, comment out this line
+let g:equinusocio_material_darker = 1
+
+" make vertsplit invisible
+let g:equinusocio_material_hide_vertsplit = 1
+
+colorscheme equinusocio_material
 
 " vim-airline    ------------ {{{1
 " ================================
@@ -64,6 +78,7 @@ colorscheme gruvbox
 let g:airline_powerline_fonts = 1
 let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_solarized_bg='gruvbox'
+
 " let g:airline_theme='molokai'
 " let g:airline_solarized_bg='molokai'
 let g:airline#extensions#tabline#reformatter = 'unique_tail_improved'

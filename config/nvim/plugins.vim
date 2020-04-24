@@ -22,6 +22,7 @@ Plug 'kshenoy/vim-signature'            " sensible marks
 
 Plug 'altercation/vim-colors-solarized' " Solarized color theme
 Plug 'flazz/vim-colorschemes'
+Plug 'chuling/vim-equinusocio-material'
 
 " git assistance ------------ {{{1
 " ================================
