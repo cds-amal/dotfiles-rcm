@@ -96,12 +96,36 @@ let g:notes_conceal_code = 0              " Conceal nothing
 let g:notes_list_bullets = ['•', '◦', '▸', '▹', '▪', '▫']
 let g:notes_markdown_program='/usr/local/bin/multimarkdown'
 
+" vim-gutter -----------------{{{1
+" ================================
+"
+set updatetime=250
+
+" https://jakobgm.com/posts/vim/git-integration/
+" Use fontawesome icons as signs
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+
+" jump to first/last
+nnoremap <silent> [C gg:GitGutterNextHunk<cr>
+nnoremap <silent> ]C G:GitGutterPrevHunk<cr>
+
+" jump to prev/next
+nnoremap <silent> [c :GitGutterPrevHunk<cr>
+nnoremap <silent> ]c :GitGutterNextHunk<cr>
+
+" preview hunk
+nnoremap <leader>p :GitGutterPreviewHunk<cr>
+
 " coc ----------------------- {{{1
 " ================================
 
-" Use `[c` and `]c` for navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+" Use `[d` and `]d` for navigate diagnostics
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
