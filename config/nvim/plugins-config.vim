@@ -3,6 +3,17 @@
 let g:indentLine_char = '┆'
 let g:indentLine_noConcealCursor=""
 
+" lgrep settings                  {{{1
+" ====================================
+" Workaround due to:
+" https://github.com/junegunn/fzf.vim/issues/448
+" See:
+" :h lgrep
+" :h grepprg
+" :h lol[der]
+
+set grepprg=ag
+
 " emmet          ------------ {{{1
 " ================================
 let g:user_emmet_settings = {
