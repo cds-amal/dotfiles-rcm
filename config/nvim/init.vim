@@ -93,7 +93,10 @@ au BufWinEnter *.* silent! loadview
 
 " navigation     ------------ {{{2
 
-nmap <localLeader>v :e ~/dotfiles/config/nvim/init.vim<CR>  " open vimrc
+nmap <localLeader>vi :e ~/dotfiles/config/nvim/init.vim<CR>
+nmap <localLeader>vp :e ~/dotfiles/config/nvim/plugins.vim<CR>
+nmap <localLeader>vs :e ~/dotfiles/config/nvim/plugins-config.vim<CR>
+
 nmap <leader>m  :tabp<CR><C-G>   " Prev tab
 nmap <leader>.  :tabn<CR><C-G>   " Next tab
 
