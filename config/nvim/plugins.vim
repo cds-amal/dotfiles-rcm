@@ -12,6 +12,7 @@ Plug 'tpope/vim-repeat'                 " repeat motions
 Plug 'tpope/vim-sensible'               " some sensible settings
 Plug 'tpope/vim-surround'               " change your surroundings
 Plug 'tpope/vim-unimpaired'             " sensible ][ mappings
+Plug 'tpope/vim-sleuth'                 " indent business
 Plug 'tpope/vim-speeddating'            " CTRL-A/CTRL-X to increment dates, times and more
 Plug 'scrooloose/nerdtree'              " File tree view
 Plug 'sheerun/vim-polyglot'             " Mega language support pack
@@ -30,7 +31,6 @@ Plug 'chuling/vim-equinusocio-material'
 Plug 'tpope/vim-fugitive'               " Git wrapper
 Plug 'tpope/vim-rhubarb'                "     needed for fugitive
 Plug 'airblade/vim-gitgutter'           " Git gutter indicators
-Plug 'rbong/vim-flog'                   " Git navigation
 Plug 'jreybert/vimagit'
 
 " status line --------------- {{{1
@@ -42,9 +42,9 @@ Plug 'vim-airline/vim-airline-themes'
 " external api -------------- {{{1
 " ================================
 
-Plug 'tyru/open-browser.vim'
-Plug 'previm/previm'                    " Markdown preview
-Plug 'segeljakt/vim-silicon'
+" Plug 'tyru/open-browser.vim'
+" Plug 'previm/previm'                    " Markdown preview
+" Plug 'segeljakt/vim-silicon'
 
 " ide things ---------------- {{{1
 " ================================
