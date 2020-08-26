@@ -59,6 +59,10 @@ set relativenumber     " Relative number
 
 autocmd BufWritePre * call TrimWhiteSpace()
 
+if exists('##TextYankPost')
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank('Substitute', 200)
+endif
+
 " filetype rules ------------ {{{2
 
 " let babelrc be a json file
