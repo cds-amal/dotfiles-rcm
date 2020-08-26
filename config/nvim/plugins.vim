@@ -62,6 +62,8 @@ Plug 'jasonwoodland/vim-html-indent'
 Plug 'scrooloose/nerdcommenter'         " awesome Commenting
 Plug 'godlygeek/tabular'
 
+Plug 'rust-lang/rust.vim'               " rust
+
 " vim notes ----------------- {{{1
 " ================================
 
