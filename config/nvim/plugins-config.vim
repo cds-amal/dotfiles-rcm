@@ -45,26 +45,6 @@ let NERDTreeMinimalUI = 1
 nmap <silent> <leader>n :NERDTreeFind<CR>
 nmap <silent> <leader>N :NERDTreeToggle<CR>
 
-" ALE            ------------ {{{1
-" ================================
-
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'markdown': ['vale'],
-\   'python': ['pylint'],
-\   'solhint': ['solhint'],
-\   'text': ['vale']
-\}
-
-let g:ale_fixers = {
-\     'javascript': ['eslint'],
-\     'markdown': ['textlint'],
-\     'text': ['textlint'],
-\     'typescript': ['eslint'],
-\}
-
-let g:ale_set_quickfix=1
-let g:ale_set_highlights=1
 
 " colorscheme    ------------ {{{1
 " ================================
@@ -94,19 +74,6 @@ let g:airline_solarized_bg='gruvbox'
 " let g:airline_solarized_bg='molokai'
 let g:airline#extensions#tabline#reformatter = 'unique_tail_improved'
 
-" vim-notes      ------------ {{{1
-" http://peterodding.com/code/vim/notes/
-" ================================
-
-let g:notes_directories = ['~/Documents/Notes']
-let g:notes_suffix = '.md'
-let g:notes_title_sync = 'rename_file'    " rename file to match title
-let g:notes_smart_quotes = 0              " No quote substitution
-let g:notes_indexfile = '~/Documents/Notes/.index.db'
-let g:notes_conceal_code = 0              " Conceal nothing
-let g:notes_list_bullets = ['•', '◦', '▸', '▹', '▪', '▫']
-let g:notes_markdown_program='/usr/local/bin/multimarkdown'
-
 " vim-gutter -----------------{{{1
 " ================================
 "
@@ -130,59 +97,6 @@ nnoremap <silent> ]c :GitGutterNextHunk<cr>
 
 " preview hunk
 nnoremap <leader>p :GitGutterPreviewHunk<cr>
-
-" coc ----------------------- {{{1
-" ================================
-
-" Use `[d` and `]d` for navigate diagnostics
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gm <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K for show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if &filetype == 'vim'
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Use <cr> to confirm complete
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 
 " open-browser -------------- {{{1
 " ================================

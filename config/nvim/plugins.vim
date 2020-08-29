@@ -6,7 +6,6 @@
 
 call plug#begin()
 
-
 Plug 'vim-scripts/autoswap.vim'         " handle swap files intelligently
 Plug 'tpope/vim-repeat'                 " repeat motions
 Plug 'tpope/vim-sensible'               " some sensible settings
@@ -15,14 +14,11 @@ Plug 'tpope/vim-unimpaired'             " sensible ][ mappings
 Plug 'tpope/vim-sleuth'                 " indent business
 Plug 'tpope/vim-speeddating'            " CTRL-A/CTRL-X to increment dates, times and more
 Plug 'scrooloose/nerdtree'              " File tree view
-Plug 'sheerun/vim-polyglot'             " Mega language support pack
 Plug 'kshenoy/vim-signature'            " sensible marks
 
 " color business ------------ {{{1
 " ================================
 
-Plug 'altercation/vim-colors-solarized' " Solarized color theme
-Plug 'flazz/vim-colorschemes'
 Plug 'chuling/vim-equinusocio-material'
 
 " git assistance ------------ {{{1
@@ -44,24 +40,19 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'junegunn/fzf'                     " fuzzy finder
 Plug 'junegunn/fzf.vim'                 " fuzzy finder
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release', 'do': { -> coc#util#install()}}
 Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'                         " Linter
+Plug 'iamcco/markdown-preview.nvim'
 
 Plug 'wellle/tmux-complete.vim'         " completion from tmux panes
 Plug 'christoomey/vim-tmux-navigator'   " Navigate between tmux and vim
 Plug 'Yggdroot/indentLine'              " Indent guides
-Plug 'jasonwoodland/vim-html-indent'
 Plug 'scrooloose/nerdcommenter'         " awesome Commenting
 Plug 'godlygeek/tabular'
 
 Plug 'rust-lang/rust.vim'               " rust
 
-" vim notes ----------------- {{{1
-" ================================
-
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
+" https://github.com/norcalli/snippets.nvim
+" Plug 'norcalli/snippets.nvim'           " snippets
 
 Plug 'tpope/vim-scriptease'              " vim script helpers
 
