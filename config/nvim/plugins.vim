@@ -41,7 +41,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf'                     " fuzzy finder
 Plug 'junegunn/fzf.vim'                 " fuzzy finder
 Plug 'mattn/emmet-vim'
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
 Plug 'wellle/tmux-complete.vim'         " completion from tmux panes
 Plug 'christoomey/vim-tmux-navigator'   " Navigate between tmux and vim
