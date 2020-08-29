@@ -39,13 +39,6 @@ Plug 'jreybert/vimagit'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" external api -------------- {{{1
-" ================================
-
-" Plug 'tyru/open-browser.vim'
-" Plug 'previm/previm'                    " Markdown preview
-" Plug 'segeljakt/vim-silicon'
-
 " ide things ---------------- {{{1
 " ================================
 
