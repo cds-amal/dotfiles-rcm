@@ -68,7 +68,7 @@ endif
 " let babelrc be a json file
 au BufNewFile,BufRead .babelrc set filetype=json
 
-au filetype css,html,javascript,json,sh,typescript setlocal foldmethod=syntax tabstop=2 shiftwidth=2 softtabstop=0 expandtab
+au filetype * setlocal foldmethod=syntax tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 au filetype vim setlocal foldmethod=marker
 
 " omni completion ----------- {{{2

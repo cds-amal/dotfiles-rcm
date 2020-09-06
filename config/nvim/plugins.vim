@@ -11,7 +11,6 @@ Plug 'tpope/vim-repeat'                 " repeat motions
 Plug 'tpope/vim-sensible'               " some sensible settings
 Plug 'tpope/vim-surround'               " change your surroundings
 Plug 'tpope/vim-unimpaired'             " sensible ][ mappings
-Plug 'tpope/vim-sleuth'                 " indent business
 Plug 'tpope/vim-speeddating'            " CTRL-A/CTRL-X to increment dates, times and more
 Plug 'scrooloose/nerdtree'              " File tree view
 Plug 'kshenoy/vim-signature'            " sensible marks
@@ -31,8 +30,9 @@ Plug 'jreybert/vimagit'
 
 " Languages ----------------- {{{1
 " ================================
-" Solidity
+
 Plug 'TovarishFin/vim-solidity'
+Plug 'rust-lang/rust.vim'
 
 " status line --------------- {{{1
 " ================================
@@ -51,7 +51,6 @@ else
   Plug 'junegunn/fzf'                     " fuzzy finder
   Plug 'junegunn/fzf.vim'                 " fuzzy finder
 endif
-Plug 'mattn/emmet-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
 Plug 'wellle/tmux-complete.vim'         " completion from tmux panes
@@ -59,8 +58,6 @@ Plug 'christoomey/vim-tmux-navigator'   " Navigate between tmux and vim
 Plug 'Yggdroot/indentLine'              " Indent guides
 Plug 'scrooloose/nerdcommenter'         " awesome Commenting
 Plug 'godlygeek/tabular'
-
-Plug 'rust-lang/rust.vim'               " rust
 
 " https://github.com/norcalli/snippets.nvim
 " Plug 'norcalli/snippets.nvim'           " snippets
