@@ -29,6 +29,11 @@ Plug 'tpope/vim-rhubarb'                "     needed for fugitive
 Plug 'airblade/vim-gitgutter'           " Git gutter indicators
 Plug 'jreybert/vimagit'
 
+" Languages ----------------- {{{1
+" ================================
+" Solidity
+Plug 'TovarishFin/vim-solidity'
+
 " status line --------------- {{{1
 " ================================
 
@@ -37,9 +42,15 @@ Plug 'vim-airline/vim-airline-themes'
 
 " ide things ---------------- {{{1
 " ================================
-
-Plug 'junegunn/fzf'                     " fuzzy finder
-Plug 'junegunn/fzf.vim'                 " fuzzy finder
+if has('nvim-0.5')
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-lua/telescope.nvim'
+  Plug 'ThePrimeagen/vim-be-good'          "vim game neovim 5
+else
+  Plug 'junegunn/fzf'                     " fuzzy finder
+  Plug 'junegunn/fzf.vim'                 " fuzzy finder
+endif
 Plug 'mattn/emmet-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 

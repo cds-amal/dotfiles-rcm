@@ -98,6 +98,10 @@ nnoremap <silent> ]c :GitGutterNextHunk<cr>
 " preview hunk
 nnoremap <leader>p :GitGutterPreviewHunk<cr>
 
+" telescope ------------------{{{1
+" ================================
+nnoremap <Leader>f :lua require'telescope.builtin'.git_files{ selection_strategy = "reset", shorten_path = true }<CR>
+
 " open-browser -------------- {{{1
 " ================================
 
