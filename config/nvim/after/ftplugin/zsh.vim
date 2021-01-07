@@ -16,17 +16,17 @@ command! -nargs=0 Splitq s:\(\s\{1,}\)\(-\+\): \\\r\t\t\2:cg | noh | retab
 "   -a
 "
 " GOT    : ls\
- -l\
- -a
+" -l \
+" -a
 
-command! -nargs=0 Test call SplitCommandLine()
-
-func! SplitCommandLine()
-  let pat    = '\(\s\{1,}\)\(-\+\)'
-  let sub    = '\\\r \2'
-  let flags  = 'g'
-  let line   = getline('.')
-  call setline('.', substitute(line, pat, sub, flags))
-endf
+" command! -nargs=0 Test call SplitCommandLine()
+"
+" func! SplitCommandLine()
+  " let pat    = '\(\s\{1,}\)\(-\+\)'
+  " let sub    = '\\\r \2'
+  " let flags  = 'g'
+  " let line   = getline('.')
+  " call setline('.', substitute(line, pat, sub, flags))
+" endf
 
 
