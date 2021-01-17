@@ -42,16 +42,10 @@ Plug 'vim-airline/vim-airline-themes'
 
 " ide things ---------------- {{{1
 " ================================
-if has('nvim-0.5')
-  Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-lua/telescope.nvim'
-  Plug 'ThePrimeagen/vim-be-good'          "vim game neovim 5
-else
-  Plug 'junegunn/fzf'                     " fuzzy finder
-  Plug 'junegunn/fzf.vim'                 " fuzzy finder
-endif
+Plug 'junegunn/fzf'                     " fuzzy finder
+Plug 'junegunn/fzf.vim'                 " fuzzy finder
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'pseewald/anyfold'
 
 Plug 'wellle/tmux-complete.vim'         " completion from tmux panes
 Plug 'christoomey/vim-tmux-navigator'   " Navigate between tmux and vim

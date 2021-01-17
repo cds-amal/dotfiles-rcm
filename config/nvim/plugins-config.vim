@@ -22,6 +22,18 @@ let g:user_emmet_settings = {
 \  },
 \}
 
+
+" anyfold        ------------ {{{1
+" ================================
+filetype plugin indent on " required
+syntax on                 " required
+
+autocmd Filetype javascript,typescript AnyFoldActivate               " activate for all filetypes
+" autocmd Filetype <your-filetype> AnyFoldActivate " activate for a specific filetype
+
+set foldlevel=3  " close all folds
+
+
 " NERDCommenter  ------------ {{{1
 " ================================
 
