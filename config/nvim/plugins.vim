@@ -32,7 +32,9 @@ Plug 'jreybert/vimagit'
 " ================================
 
 Plug 'TovarishFin/vim-solidity'
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
+Plug 'mattn/emmet-vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
 " status line --------------- {{{1
 " ================================
