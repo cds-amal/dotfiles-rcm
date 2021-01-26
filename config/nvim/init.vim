@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
   Plug 'itchyny/lightline.vim'
   Plug 'itchyny/vim-gitbranch'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -20,6 +21,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-fugitive'        " Git wrapper
+  Plug 'tpope/vim-rhubarb'         " Git wrapper
+  Plug 'jreybert/vimagit'          " More git integration
 
   " responsive html preview
   Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}

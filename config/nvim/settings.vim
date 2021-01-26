@@ -52,10 +52,6 @@ nnoremap <leader>m :MaximizerToggle!<CR>
 nnoremap <leader>F :Neoformat<CR>
 let g:neoformat_run_all_formatters = 1
 let g:neoformat_enabled_python = ['prettierstandard']
-" let g:neoformat_javascript_prettierstandard = {
-"             \ 'exe': '~/.nvm/versions/node/v10.20.1/bin/prettier-standard',
-"             \ 'replace': 1
-"             \ }
 
 " junegunn/fzf.vim
 nnoremap <localLeader>g :GFiles<CR>
