@@ -95,3 +95,5 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # https://github.com/mnowotnik/extra-fzf-completions
 export EXTRA_FZF_COMPLETIONS=(docker)
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
