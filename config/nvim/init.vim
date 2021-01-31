@@ -24,11 +24,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'        " Git wrapper
   Plug 'tpope/vim-rhubarb'         " Git wrapper
   Plug 'jreybert/vimagit'          " More git integration
+  Plug 'janko/vim-test'
 
   " responsive html preview
   Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 
-  Plug 'vim-scripts/autoswap.vim'         " handle swap files intelligently
+  " Plug 'vim-scripts/autoswap.vim'         " handle swap files intelligently
   Plug 'vimwiki/vimwiki'
   Plug 'Yggdroot/indentLine'              " Indent guides
 call plug#end()

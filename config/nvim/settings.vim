@@ -7,6 +7,7 @@ set splitbelow
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set noswapfile
 set number             " Show line number
 set relativenumber     " Relative number
 set ignorecase
@@ -32,6 +33,14 @@ nnoremap <silent> <leader>vim :e $MYVIMRC<CR>
 
 " tomasiser/vim-code-dark
 colorscheme codedark
+
+" janko/vim-test
+nnoremap <silent> tt :TestNearest<CR>
+nnoremap <silent> tf :TestFile<CR>
+nnoremap <silent> ts :TestSuite<CR>
+nnoremap <silent> t_ :TestLast<CR>
+let test#strategy = "neovim"
+let test#neovim#term_position = "vertical"
 
 " itchyny/lightline.vim and itchyny/vim-gitbranch
 let g:lightline = {
