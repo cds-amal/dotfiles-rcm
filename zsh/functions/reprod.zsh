@@ -1,7 +1,8 @@
 reprod () {
     # customize these (FAKER: `npm install -g faker-cli`)
     local ROOT=~/work/reproduce
-    local FAKER=~/.nvm/versions/node/v10.20.1/bin/faker-cli
+    # local FAKER=~/.nvm/versions/node/v10.20.1/bin/faker-cli
+    local FAKER=/usr/local/bin/faker-cli
     local year="$(date +%Y)"
     local month="$(date +%m)"
     local day="$(date +%d)"

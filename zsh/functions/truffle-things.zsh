@@ -9,3 +9,17 @@ use-truffle-core-debug () {
 use-truffle-bundle () {
     alias truffle=node\ ~/work/truffle/packages/truffle/build/cli.bundled.js
 }
+
+truffle-link () {
+  echo "usage: from root folder\n\tyarn-link pkg1 pkg2 pkg3"
+  for pkg in "$@";  do
+    cd packages/$pkg ; yarn unlink ; yarn link ; cd -
+  done
+}
+
+truffle-ulink () {
+  echo "usage: from root folder\n\tyarn-link pkg1 pkg2 pkg3"
+  for pkg in "$@";  do
+    cd packages/$pkg ; yarn unlink ; cd -
+  done
+}

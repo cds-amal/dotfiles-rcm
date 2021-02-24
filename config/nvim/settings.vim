@@ -7,7 +7,6 @@ set splitbelow
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set noswapfile
 set number             " Show line number
 set relativenumber     " Relative number
 set ignorecase
@@ -21,26 +20,27 @@ set cmdheight=1
 set shortmess+=c
 set signcolumn=yes
 set updatetime=750
+set noswapfile
 filetype plugin indent on
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
+set termguicolors
 let mapleader = ","
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 let g:netrw_banner=0
 let g:markdown_fenced_languages = ['javascript', 'js=javascript', 'json=javascript']
 nnoremap <silent> <leader>vim :e $MYVIMRC<CR>
 
-" tomasiser/vim-code-dark
-colorscheme codedark
+" ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-]>"
+let g:UltiSnipsJumpBackwardTrigger="<c-[>"
 
-" janko/vim-test
-nnoremap <silent> tt :TestNearest<CR>
-nnoremap <silent> tf :TestFile<CR>
-nnoremap <silent> ts :TestSuite<CR>
-nnoremap <silent> t_ :TestLast<CR>
-let test#strategy = "neovim"
-let test#neovim#term_position = "vertical"
+" tomasiser/vim-code-dark
+"colorscheme codedark
+colorscheme gruvbox8_hard
 
 " itchyny/lightline.vim and itchyny/vim-gitbranch
 let g:lightline = {
@@ -51,7 +51,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ 'colorscheme': 'codedark',
+      \ 'colorscheme': 'gruvbox8',
       \ }
 
 " szw/vim-maximizer
@@ -61,6 +61,10 @@ nnoremap <leader>m :MaximizerToggle!<CR>
 nnoremap <leader>F :Neoformat<CR>
 let g:neoformat_run_all_formatters = 1
 let g:neoformat_enabled_python = ['prettierstandard']
+let g:neoformat_javascript_prettierstandard = {
+    \ 'exe': '~/.nvm/versions/node/v10.20.1/bin/prettier-standard',
+    \ 'replace': 1
+    \ }
 
 " junegunn/fzf.vim
 nnoremap <localLeader>g :GFiles<CR>
@@ -82,8 +86,21 @@ endif
 
 " Save/load foldlevels when navigating in/out of buffers
 " https://vim.fandom.com/wiki/Make_views_automatic
+"
 au BufWinLeave *.* mkview
 au BufWinEnter *.* silent! loadview
+
+au CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
+
+lua <<EOF
+  require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+  },
+}
+EOF
 
 " zap trailing ws on save
 autocmd BufWritePre * call TrimWhiteSpace()
@@ -98,3 +115,20 @@ function! ConceallevelToggle()
     set conceallevel=1
   endif
 endfunction
+
+
+let g:vimwiki_root = '~/vimwiki'
+let g:vimwiki_listsyms = ' ○◐●✓'
+let g:vimwiki_list = [
+    \{'path': '~/vimwiki',              'ext': '.md'},
+    \{'path': '~/vimwiki/config',       'ext': '.md'},
+    \{'path': '~/vimwiki/tbg',          'ext': '.md'},
+    \{'path': '~/vimwiki/tbg/drizzle',  'ext': '.md'},
+    \{'path': '~/vimwiki/tbg/ganache',  'ext': '.md'},
+    \{'path': '~/vimwiki/tbg/teams',    'ext': '.md'},
+    \{'path': '~/vimwiki/tbg/truffle',  'ext': '.md'},
+    \{'path': '~/vimwiki/tbg/webinars', 'ext': '.md'}]
+
+
+" rmagatti/auto-session
+let g:auto_session_root_dir = "~/.local/share/nvim/sessions"
