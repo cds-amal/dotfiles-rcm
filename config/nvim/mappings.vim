@@ -34,13 +34,17 @@ nnoremap <C-n> :call NumberToggle()<CR>
 
 " auto completion
 " Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
 
-" Avoid showing message extra message when using completion
-set shortmess+=c
-let g:completion_enable_snippet = 'UltiSnips'
+" defx
+"
+nnoremap <silent> <leader>n :Defx
+  \ `escape(expand('%:p:h'), ' :')`
+  \ -search=`expand('%:p')`
+  \ -split=vertical
+  \ -winwidth=50
+  \ -direction=topleft<CR>
 
+nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')

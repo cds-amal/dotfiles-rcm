@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-signify'
   Plug 'neovim/nvim-lspconfig', { 'do': 'npm i -g typescript-language-server' }
-  Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'pangloss/vim-javascript'
   Plug 'sbdchd/neoformat', { 'do': 'npm i -g prettier-standard' }
@@ -26,6 +25,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'        " Git wrapper
   Plug 'tpope/vim-rhubarb'         " Git wrapper
   Plug 'jreybert/vimagit'          " More git integration
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 't9md/vim-choosewin'
+  Plug 'dhruvasagar/vim-table-mode'
+
+  " Completion
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'albertoCaroM/completion-tmux'
+  Plug 'nvim-treesitter/completion-treesitter'
+  Plug 'steelsojka/completion-buffers'
 
   Plug 'SirVer/ultisnips'
   Plug 'joaohkfaria/vim-jest-snippets'
