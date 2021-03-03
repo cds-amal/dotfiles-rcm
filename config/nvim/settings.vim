@@ -1,33 +1,20 @@
-" default options
+" This variable enable automatically popup window for completion. Set
+" this value to 0 if you don't want automatically popup window.
+" If you disable auto popup menu, you can manually trigger completion by
+" mapping keys. For example:
+let g:completion_enable_auto_popup = 0
 
-" set completeopt=menuone,noinsert,noselect
 set completeopt=menuone,noselect
 set shortmess+=c
-let g:completion_enable_snippet = 'UltiSnips'
+" let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_confirm_key = "\<CR>"
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
-let g:completion_chain_complete_list = {
-    \ 'lua': [
-    \    'string': [
-    \        {'mode': '<c-p>'},
-    \        {'mode': '<c-n>'}],
-    \    'func' : [
-    \        {'complete_items': ['lsp']}],
-    \    'default': [
-    \       {'complete_items': ['lsp', 'snippet']},
-    \       {'mode': '<c-p>'},
-    \       {'mode': '<c-n>'}],
-    \],
-    \ 'default' : {
-    \   'default': [
-    \       {'complete_items': ['lsp', 'snippet']},
-    \       {'mode': '<c-p>'},
-    \       {'mode': '<c-n>'}],
-    \   'comment': []
-    \   }
-    \}
-imap  <c-j> <Plug>(completion_next_source)
-imap  <c-k> <Plug>(completion_prev_source)
+
+" change source if current source has no complete items
+" let g:completion_auto_change_source = 1
+
+" imap  <c-]> <Plug>(completion_next_source)
+" imap  <c-[> <Plug>(completion_prev_source)
 
 set mouse=a
 set splitright
