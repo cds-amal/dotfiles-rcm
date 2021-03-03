@@ -76,7 +76,7 @@ return require('packer').startup {
     -- Configurations for neovim lsp.
     --   neovim/neovim has all of the LSP code.
     use { 'neovim/nvim-lspconfig',
-          run = 'npm i -g typescript-language-server' 
+          run = 'npm i -g typescript-language-server'
     }
     use 'nvim-lua/lsp_extensions.nvim'
     use 'wbthomason/lsp-status.nvim'
@@ -85,12 +85,6 @@ return require('packer').startup {
     use 'hrsh7th/nvim-compe'
 
     -- Completion stuff
-    -- local_use 'rofl.nvim'
-
-    -- use {
-    --   'nvim-treesitter/completion-treesitter',
-    --   run = function() vim.cmd [[TSUpdate]] end
-    -- }
 
     -- use 'hrsh7th/vim-vsnip'
     -- use 'hrsh7th/vim-vsnip-integ'
@@ -103,7 +97,7 @@ return require('packer').startup {
     -- use 'puremourning/vimspector'
     -- use 'mfussenegger/nvim-dap'
     -- use 'mfussenegger/nvim-dap-python'
-    -- use { 
+    -- use {
     --   'theHamsta/nvim-dap-virtual-text',
     --   run = function()
     --     vim.g.dap_virtual_text = true
@@ -115,7 +109,7 @@ return require('packer').startup {
     use { 'nvim-treesitter/nvim-treesitter',
           run = ':TSUpdate'
     }
-        
+
     use 'nvim-treesitter/playground'
     use 'vigoux/architext.nvim'
 

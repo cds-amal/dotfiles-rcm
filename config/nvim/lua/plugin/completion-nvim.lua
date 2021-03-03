@@ -13,7 +13,7 @@ vim.g.completion_enable_auto_popup = 1
 
 -- Whether or not to use the trigger characters provided by the language server
 -- for triggering the popup menu.
-vim.g.completion_enable_server_trigger = 0
+vim.g.completion_enable_server_trigger = 1
 
 -- use snippets
 vim.g.completion_enable_snippet = 'UltiSnips'
