@@ -26,7 +26,7 @@ return require('packer').startup {
     use 'kosayoda/nvim-lightbulb'
     use 'SirVer/ultisnips'
     use 'joaohkfaria/vim-jest-snippets'
-
+    use 'erietz/vim-terminator'
 
     -- VIM EDITOR: {{{
 
@@ -117,6 +117,7 @@ return require('packer').startup {
     -- NAVIGATION: {{{
 
     use 'pechorin/any-jump.vim'
+    -- }}}
 
     -- TEXT MANIUPLATION {{{
     use 'godlygeek/tabular'        -- Quickly align text by pattern
