@@ -89,9 +89,11 @@ opt.fillchars = { eob = "~" }
 -- settings
 vim.cmd('colorscheme gruvbox8_hard')
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
+vim.cmd [[autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart]]
+vim.cmd [[autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear]]
 
 -- netrw
-vim.g.netrw_banner = 0    
+vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 3 -- tree style listing
 vim.g.netrw_browsex_viewer = 'xdg-open'
 
