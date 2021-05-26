@@ -98,4 +98,7 @@ vim.g.netrw_liststyle = 3 -- tree style listing
 vim.g.netrw_browsex_viewer = 'xdg-open'
 
 
+-- ingnore TJ's stuff for now
+vim.g.ts_lua_skip_queries = true
+
 -- debug settings
