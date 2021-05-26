@@ -68,6 +68,10 @@ fi
 # zplug load --verbose
 zplug load
 
+# update path
+#
+export PATH="$HOME/bin:$PATH"
+
 
 # trigger a ch dir so it can read environment files
 # for python (./bin/activate) and node (.zshrc) environments
