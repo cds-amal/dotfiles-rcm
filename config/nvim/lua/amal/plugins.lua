@@ -7,9 +7,11 @@ return require('packer').startup {
     use 'tjdevries/tree-sitter-lua'
     use 'tjdevries/pastery.vim'
     use 'tjdevries/astronauta.nvim'
-    use 'glepnir/lspsaga.nvim'
-    use 'onsails/lspkind-nvim'
-    use 'anott03/nvim-lspinstall'
+    -- use 'glepnir/lspsaga.nvim'
+    -- use 'onsails/lspkind-nvim'
+
+    -- is this needed?
+    -- use 'anott03/nvim-lspinstall'
     use 'itchyny/lightline.vim'
     use 'itchyny/vim-gitbranch'
 
@@ -22,7 +24,10 @@ return require('packer').startup {
     use 'nvim-telescope/telescope-packer.nvim'
     use 'nvim-telescope/telescope-github.nvim'
     use { 'turbio/bracey.vim', run = 'npm install --prefix server' }
-    use 'Yggdroot/indentLine'
+
+    -- replace indentLine
+    -- use 'Yggdroot/indentLine'
+    use 'lukas-reineke/indent-blankline.nvim'
     use 'kosayoda/nvim-lightbulb'
     use 'SirVer/ultisnips'
     use 'joaohkfaria/vim-jest-snippets'
@@ -69,6 +74,7 @@ return require('packer').startup {
     -- use { 'prettier/vim-prettier', run = 'yarn global install' }
     use { 'vim-scripts/JavaScript-Indent', ft = 'javascript' }
     use { 'pangloss/vim-javascript', ft = { 'javascript', 'html' } }
+    use 'dpelle/vim-LanguageTool'
     -- }}}
 
     -- LSP {{{
@@ -76,7 +82,7 @@ return require('packer').startup {
     -- Configurations for neovim lsp.
     --   neovim/neovim has all of the LSP code.
     use { 'neovim/nvim-lspconfig',
-          run = 'npm i -g typescript-language-server'
+          run = 'npm i -g typescript-language-server typescript'
     }
     use 'nvim-lua/lsp_extensions.nvim'
     use 'wbthomason/lsp-status.nvim'
@@ -141,7 +147,8 @@ return require('packer').startup {
     use 'szw/vim-maximizer'
     use 'chuling/equinusocio-material.vim'
     use 'lifepillar/vim-gruvbox8'
-    use {'tomlion/vim-solidity',ft = {'solidity'} , run = 'npm i -g solhint'}
+    use {'TovarishFin/vim-solidity', ft = {'solidity'} , run = 'npm i -g solhint'}
+
     use 'tpope/vim-speeddating'
     use 'tpope/vim-unimpaired'
     use 'tpope/vim-fugitive'
