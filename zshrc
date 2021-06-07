@@ -98,5 +98,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # pg notes
 echo pg_ctl -D /usr/local/var/postgres start
 
+#gpg
+export GPG_TTY=$(tty)
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
