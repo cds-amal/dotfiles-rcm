@@ -49,7 +49,9 @@ opt.breakindent    = true
 opt.showbreak      = string.rep(' ', 3) -- Make it so that long lines wrap smartly
 opt.linebreak      = true
 
-opt.foldmethod     = 'marker'
+opt.foldmethod     = 'expr'
+opt.foldexpr        = 'nvim_treesitter#foldexpr()'
+
 opt.foldlevel      = 0
 opt.modelines      = 1
 
