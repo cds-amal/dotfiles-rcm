@@ -1,5 +1,5 @@
 # load custom executable functions
-for function in ~/.zsh/functions/*; do
+for function in ~/.zsh/functions/*.zsh; do
   source $function
 done
 
